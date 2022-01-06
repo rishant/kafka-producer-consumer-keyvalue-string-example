@@ -1,0 +1,23 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.1.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+group = 'com.sample'
+version = '1.0'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile group: 'org.apache.kafka', name: 'kafka-clients', version: '2.1.0'
+	compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
+	
+}
+
+test {
+	useJUnitPlatform()
+}
